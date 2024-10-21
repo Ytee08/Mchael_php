@@ -86,9 +86,10 @@ if(isset($_POST['submit'])) {
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>Product Name</th>
-                    <th>Product position</th>
+                    <th>Name</th>
+                    <th>Position</th>
                     <th>age</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -103,6 +104,15 @@ if(isset($_POST['submit'])) {
                        <td><?php echo $employess['name'] ?></td>
                        <td><?php echo $employess['position'] ?></td>
                        <td><?php echo $employess['age'] ?></td>
+                       <td>
+                         <a href="./update.php ?id=<?php echo $employess['id']; ?>">
+                            <button class="edit">Edit</button>
+                        </a>
+
+                         <a href="./delete.php?id=<?php echo $employess['id']; ?>" class="delete">
+                            <button class="delete">Delete</button>
+                        </a>
+                       </td>
                    </tr>
                 <?php }?>
             </tbody>
